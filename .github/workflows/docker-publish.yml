@@ -30,7 +30,7 @@ jobs:
 
       - uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: sphr2k/ubuntu-systemd
+          image: ubuntu-systemd
           tags: latest
           registry: ghcr.io
           username: ${{ github.actor }}
