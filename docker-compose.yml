@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: ubuntu-systemd
+    image: ghcr.io/sphr2k/ubuntu-systemd
     hostname: ubuntu
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
