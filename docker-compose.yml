@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: sphr2k/ubuntu-systemd
+    hostname: ubuntu
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
