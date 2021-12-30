@@ -1,4 +1,4 @@
-name: Build & push to Docker Hub
+name: Build & Push to GitHub Container Registry
 
 # Controls when the action will run. 
 on:
