@@ -4,14 +4,14 @@ ENV container docker
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN cat <<EOT > /etc/apt/sources.list
-deb http://deb.debian.org/debian/ testing main contrib non-free
-deb-src http://deb.debian.org/debian/ testing main contrib non-free
-deb http://deb.debian.org/debian/ testing-updates main contrib non-free
-deb-src http://deb.debian.org/debian/ testing-updates main contrib non-free
-deb http://deb.debian.org/debian-security testing-security main
-deb-src http://deb.debian.org/debian-security testing-security main
-EOT
+RUN echo ' \n\
+    deb http://deb.debian.org/debian/ testing main contrib non-free              \n\
+    deb-src http://deb.debian.org/debian/ testing main contrib non-free          \n\
+    deb http://deb.debian.org/debian/ testing-updates main contrib non-free      \n\
+    deb-src http://deb.debian.org/debian/ testing-updates main contrib non-free  \n\
+    deb http://deb.debian.org/debian-security testing-security main              \n\
+    deb-src http://deb.debian.org/debian-security testing-security main          \n\
+'> /etc/apt/sources.list
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends systemd systemd-sysv \
