@@ -22,7 +22,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: ubuntu-systemd
-          dockerfile: Dockerfile.ubuntu
+          dockerfile: Dockerfile.ubuntu-22.04
           tags: 22.04,latest
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -35,7 +35,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: ubuntu-systemd
-          dockerfile: Dockerfile.ubuntu
+          dockerfile: Dockerfile.ubuntu-20.04
           tags: 20.04
           registry: ghcr.io
           username: ${{ github.actor }}
